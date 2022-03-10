@@ -2,6 +2,8 @@ import './App.css';
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import UserList from './Coomponents/UserList';
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function App() {
 
@@ -9,13 +11,14 @@ function App() {
  
  useEffect(()=>{
   axios.get("https://jsonplaceholder.typicode.com/users").then((response)=>{
-    console.log(response.data)   
-     setstate(response.data])
+     
+     setstate([...response.data])
   })
  },[])
 
   return (
-    <div className="App">
+    <div>
+      <h1>List Of Users</h1>
       <UserList users={state}/>
     </div>
   );

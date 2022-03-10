@@ -1,10 +1,11 @@
 import React from 'react'
 
-function UserList({users}) {
-    console.log("hello,",users)
-    console.log(users[0])
+function UserList(users) {
   return (
-    <div>UserList</div>
+    <div>
+     {users.map((elt)=>(<h3>{elt.name}</h3>))}
+
+    </div>
   )
 }
 
