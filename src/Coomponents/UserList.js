@@ -1,9 +1,11 @@
 import React from 'react'
+import Card from './Card'
 
-function UserList(users) {
+function UserList({users}) {
   return (
     <div>
-     {users.map((elt)=>(<h3>{elt.name}</h3>))}
+      <h1>hello</h1>
+    {users.map((elt,index)=>(<Card key={index} user={elt}/>))}
 
     </div>
   )
